@@ -115,5 +115,11 @@ class Evento_model extends CI_Model {
 		}
 		return $arrayRelatorio;
 	}
+	
+	function listarEventosPorId($id){
+		$query = $this->db->get_where(self::TABELA , array('idevento' => $id));
+		return $query->result();
+	}
+	
 }
 ?>

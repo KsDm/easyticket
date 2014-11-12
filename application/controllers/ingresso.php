@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Index extends CI_Controller {
+class Ingresso extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
@@ -8,7 +8,6 @@ class Index extends CI_Controller {
 	}
 
 	public function index() {
-		$result['result'] = $this -> listarEventos();
 		$this -> load -> view('index', $result);
 	}
 	
@@ -17,10 +16,10 @@ class Index extends CI_Controller {
 	 * 
 	 * Teste = OK
 	 */
-	function listarEventos() {
+	function listar_ingresso($id) {
 		$this -> load -> model('evento_model');
-		$result = $this->evento_model->listarEventos();
-
-		return $result;
+		$ingressos['ingressos'] = $this->evento_model->listarEventosPorId($id);
+		
+		$this -> load -> view('ingresso', $ingressos);
 	}
 }

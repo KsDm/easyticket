@@ -34,3 +34,47 @@ body{
 .painelRelatorio{
 	padding-left: 15px;
 }
+
+.listaEventos{
+	margin-top: 5%;
+}
+
+.eventos{
+	margin: auto;
+	border: 2px solid #EEEEEE;
+	padding: 5px;
+	border-radius: 9px;
+	background: #1987FF;
+	color: #fff;
+}
+
+.eventosHorario{
+	float: right;
+	text-align: right;
+}
+
+.cadastro{
+	font-size: 29px;
+}
+
+.cadastroCampo{
+	padding: 5%;
+	border-radius: 1px solid #ccc;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
