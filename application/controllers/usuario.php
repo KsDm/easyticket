@@ -32,10 +32,18 @@ class Usuario extends CI_Controller {
 		
 		$usuarioArray = array();
 		
-		foreach ($usuarios as $usuario)
+		foreach ($usuarios as $usuario){
+			if($usuario->fgstatus == "A")	
+				$usuario->fgstatus = "Ativo";
+			else 
+				$usuario->fgstatus = "Bloqueado";
 			array_push($usuarioArray, $usuario);
+		}
+			
 		
-		echo json_encode(array("data" => $usuarioArray));	
+							
+		
+		echo json_encode(array("data" => $usuarioArray));
 	}
 	
 	/* 

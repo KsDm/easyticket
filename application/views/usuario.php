@@ -26,7 +26,10 @@
 						</div>
 						<div class="form-group">
 							<label for="fgstatus">Status</label>
-							<input class="form-control" id="fgstatus" name="fgstatus" type="text" />
+							<select class="form-control" id="fgstatus" name="fgstatus">
+								<option value="A">Ativo</option>
+								<option value="B">Bloqueado</option>
+							</select>
 						</div>
 						<div class="form-group">
 							<label for="login">Login</label>
@@ -93,17 +96,20 @@
 						<div class="modal-header">
 							 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 							<h4 class="modal-title" id="myModalLabel">
-								Modal title
+								Alteração de Usuário
 							</h4>
 						</div>
 						<div class="modal-body">
 							<div class="form-group">
-								<label for="nomeEvento">Nome do Evento</label>
+								<label for="nomeEvento">Nome do Usuário</label>
 								<input class="form-control" id="itpNmUsuario" name="nmusuario" type="text" />
 							</div>
 							<div class="form-group">
-								<label for="data">Statu</label>
-								<input class="form-control" id="iptFgStatus" name="fgstatus" type="text"  />
+								<label for="data">Status</label>
+								<select class="form-control" id="iptFgStatus" name="fgstatus">
+									<option title="Ativo" value="A">Ativo</option>
+									<option title="Bloqueado" value="B">Bloqueado</option>
+								</select>
 							</div>
 							<div class="form-group">
 								<label for="horario">Login</label>

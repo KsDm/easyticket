@@ -74,7 +74,7 @@ function modalAlterarEvento(){
 		var data = tableEvento.row( $(this).parents('tr') ).data();
 		var titleOption = $("#fk_categoria option");
 
-		nomeCategoria = data["nomeCategoria"];
+		var nomeCategoria = data["nomeCategoria"];
 		$("#fk_categoria option[title='"+nomeCategoria+"']").attr("selected","selected");
 		
 		$(".iptIdEvento").val(data["idevento"]);

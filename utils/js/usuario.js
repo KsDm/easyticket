@@ -56,7 +56,8 @@ function modalAlterarUsuario(){
 		var data = table.row( $(this).parents('tr') ).data();
 		$("#iptIdUsuario").val(data["idusuario"]);
 		$("#itpNmUsuario").val(data["nmusuario"]);
-		$("#iptFgStatus").val(data["fgstatus"]);
+		var status = data["fgstatus"];
+		$("#iptFgStatus option[title='"+status+"']").attr("selected","selected");
 		$("#iptLogin").val(data["login"]);
 		$("#iptPerfil").val(data["perfil"]);
 	 });
