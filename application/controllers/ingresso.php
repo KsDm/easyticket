@@ -22,4 +22,15 @@ class Ingresso extends CI_Controller {
 		
 		$this -> load -> view('ingresso', $ingressos);
 	}
+	
+	function comprarIngressos(){
+		$dateTime = time();
+		$protocolo = md5($dateTime);
+		
+		// Passando usuário de forma estatica para exibir funcionamento
+		$idCliente = 1;
+		
+		$this -> load -> model('compra_model');
+		//ENIOS LIMA
+	}
 }
