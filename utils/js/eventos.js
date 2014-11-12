@@ -64,7 +64,7 @@ $(document).ready(function() {
 function modalExcluirEvento(){
 	$("#tblEventos tbody").on("click", ".btn-excluir", function () {
 		var data = tableEvento.row( $(this).parents('tr') ).data();
-		$(".spanNomeEvento").append(data["nomeEvento"]);
+		$(".spanNomeEvento").html(data["nomeEvento"]);
 		$(".spanIdEvento").val(data["idevento"]);
 	 });
 }
@@ -72,7 +72,11 @@ function modalExcluirEvento(){
 function modalAlterarEvento(){
 	$("#tblEventos tbody").on("click", ".btn-alterar", function () {
 		var data = tableEvento.row( $(this).parents('tr') ).data();
-		$(".iptIdCategoria").append(data["nomeCategoria"]);
+		var titleOption = $("#fk_categoria option");
+
+		nomeCategoria = data["nomeCategoria"];
+		$("#fk_categoria option[title='"+nomeCategoria+"']").attr("selected","selected");
+		
 		$(".iptIdEvento").val(data["idevento"]);
 		$(".iptIdCategoria").val(data["idcategoria"]);
 		$("#iptNomeEvento").val(data["nomeEvento"]);
