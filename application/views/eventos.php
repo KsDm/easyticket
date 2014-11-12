@@ -45,7 +45,8 @@
 												echo '<option value="' . $row -> idcategoria . '">' . $row -> nomeCategoria . '</option>';
 											}
 											?>
-									</div>
+										
+										</div>
 									</select>
 									<br />
 									<br />
@@ -130,7 +131,11 @@
 							<div class="form-group">
 								<label for="categoria">Categoria</label>
 								<select id="fk_categoria" name="fk_categoria">
-									<option class="iptIdCategoria"><span class="iptNomeCategoria"></span></option>
+									<?php
+										foreach ($result as $row) {
+											echo '<option title="'.$row -> nomeCategoria.'" value="' . $row -> idcategoria . '">' . $row -> nomeCategoria . '</option>';
+										}
+									?>
 								</select>
 							</div>
 							<div class="form-group">
