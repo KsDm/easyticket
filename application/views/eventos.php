@@ -1,3 +1,12 @@
+			<!-- cdn for modernizr, if you haven't included it already -->
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+<!-- polyfiller file to detect and load polyfills -->
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+<script>
+  webshims.setOptions('waitReady', false);
+  webshims.setOptions('forms-ext', {types: 'date'});
+  webshims.polyfill('forms forms-ext');
+</script>
 			<div class="col-lg-10  espacoTopo conteudoPrincipal">
 				<h3>
 					Eventos
@@ -56,7 +65,7 @@
 									</div>
 									<div class="form-group">
 										<label for="data">Data</label>
-										<input class="form-control" id="data" name="data" type="text" />
+										<input class="form-control" id="data" name="data" type="date" />
 									</div>
 									<div class="form-group">
 										<label for="horario">Horario</label>

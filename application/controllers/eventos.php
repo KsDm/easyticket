@@ -42,8 +42,10 @@ class Eventos extends CI_Controller {
 		
 		$eventoArray = array();
 		
-		foreach ($eventos as $evento)
+		foreach ($eventos as $evento){
+			$evento->data = date("d/m/Y", strtotime($evento->data));
 			array_push($eventoArray, $evento);
+		}
 		
 		echo json_encode(array("data" => $eventoArray));	
 	}
@@ -62,6 +64,8 @@ class Eventos extends CI_Controller {
 		$data = mysql_real_escape_string($_POST ["data"]);
 		$horario = mysql_real_escape_string($_POST ["horario"]);
 		$fkCategoria = mysql_real_escape_string($_POST ["fk_categoria"]);
+		
+		$data = date("Y-m-d", strtotime($data));
 		
 		$evento_model = new Evento_model(null, $nomeEvento, $data, $horario, $fkCategoria);
 		
@@ -93,6 +97,7 @@ class Eventos extends CI_Controller {
 		$horario = mysql_real_escape_string($_POST ["horario"]);
 		$fkCategoria = mysql_real_escape_string($_POST ["fk_categoria"]);
 		
+		$data = date("Y-m-d", strtotime($data));
 		
 		$evento_model = new Evento_model($idevento, $nomeEvento, $data, $horario, $fkCategoria);
 		
