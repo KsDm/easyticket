@@ -36,12 +36,12 @@ $(document).ready(function() {
                 "searchable": false
          },
     	 {
-            "targets": 5,
+            "targets": 6,
             "data": null,
             "defaultContent": "<a href='#alterarEvento' data-toggle='modal' id='modal-30777' role='button' class='btn btn-success btn-alterar'><i class='glyphicon glyphicon-refresh'></i></a> <a href='#exlcuirEvento' data-toggle='modal' id='modal-30777' role='button' class='btn btn-danger btn-excluir'><i class='glyphicon glyphicon-trash'></i></a>"
         }
         ],
-    	"columns" : [{"data" : "idevento"}, {"data" : "nomeEvento"}, {"data" : "data"}, {"data" : "horario"}, {"data" : "nomeCategoria"}]
+    	"columns" : [{"data" : "idevento"}, {"data" : "nomeEvento"}, {"data" : "data"}, {"data" : "horario"}, {"data" : "preco"} , {"data" : "nomeCategoria"}]
     });
     
     $("#btnAddCategoria").click(function(){

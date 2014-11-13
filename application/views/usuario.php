@@ -1,6 +1,6 @@
 </div>
 <div class="col-lg-10  espacoTopo conteudoPrincipal">
-	<h3> Ingressos </h3>
+	<h3> Usuário </h3>
 	<hr />
 	<a id="modal-170030" href="#addUsuario" role="button" class="btn btn-success" data-toggle="modal">Adicionar Usuário</a>
 	<br />

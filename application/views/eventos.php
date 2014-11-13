@@ -71,6 +71,10 @@
 										<label for="horario">Horario</label>
 										<input class="form-control" id="horario" name="horario" type="text" />
 									</div>
+									<div class="form-group">
+										<label for="preco">Preço</label>
+										<input class="form-control" id="preco" name="preco" type="text" />
+									</div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default" data-dismiss="modal">
@@ -94,6 +98,7 @@
 	                <th>Data</th>
 	                <th>Horario</th>
 	                <th>Categoria</th>
+	                <th>Preço</th>
 	                <th>Ação</th>
 	            </tr>
 	        </thead>

@@ -41,8 +41,6 @@ class Usuario extends CI_Controller {
 		}
 			
 		
-							
-		
 		echo json_encode(array("data" => $usuarioArray));
 	}
 	

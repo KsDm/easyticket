@@ -7,13 +7,15 @@ class Evento_model extends CI_Model {
 	var $nomeEvento; 
 	var $data; 
 	var $horario; 
+	var $preco;
 	var $fkCategoria;
 	
-	function __construct($idevento = "", $nomeEvento = "", $data = "", $horarios = "", $fkCategoria = ""){
+	function __construct($idevento = "", $nomeEvento = "", $data = "", $horarios = "",$preco = "" , $fkCategoria = ""){
 		$this->idevento = $idevento;
 		$this->nomeEvento = $nomeEvento;
 		$this->data = $data;
 		$this->horario = $horarios;
+		$this->preco = $preco;
 		$this->fkCategoria = $fkCategoria;
 	}
 	
@@ -41,7 +43,7 @@ class Evento_model extends CI_Model {
 	function cadastrarEvento(Evento_model $evento) {
 		if(!empty($evento->nomeEvento) && !empty($evento->data) && !empty($evento->horario) && !empty($evento->fkCategoria) ){
 			
-			$data = array('nomeEvento' => $evento->nomeEvento, 'data' => $evento->data, 'horario' => $evento->horario, 'categoria_idcategoria' => $evento->fkCategoria);
+			$data = array('nomeEvento' => $evento->nomeEvento, 'data' => $evento->data, 'horario' => $evento->horario, 'preco' => $evento->preco , 'categoria_idcategoria' => $evento->fkCategoria);
 
 			$inserir = $this -> db -> insert(self::TABELA, $data);
 			
@@ -83,6 +85,7 @@ class Evento_model extends CI_Model {
                'nomeEvento' => $evento->nomeEvento,
                'data' => $evento->data,
                'horario' => $evento->horario,
+               'preco' => $evento->preco,
                'categoria_idcategoria' => $evento->fkCategoria
             );
 			

@@ -63,11 +63,12 @@ class Eventos extends CI_Controller {
 		$nomeEvento = mysql_real_escape_string($_POST ["nomeEvento"]);
 		$data = mysql_real_escape_string($_POST ["data"]);
 		$horario = mysql_real_escape_string($_POST ["horario"]);
+		$preco = mysql_real_escape_string($_POST ["preco"]);
 		$fkCategoria = mysql_real_escape_string($_POST ["fk_categoria"]);
 		
 		$data = date("Y-m-d", strtotime($data));
 		
-		$evento_model = new Evento_model(null, $nomeEvento, $data, $horario, $fkCategoria);
+		$evento_model = new Evento_model(null, $nomeEvento, $data, $horario, $preco, $fkCategoria);
 		
 		$cadastrar = $this->evento_model->cadastrarEvento($evento_model);
 		

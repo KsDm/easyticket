@@ -1,6 +1,6 @@
 </div>
 <div class="col-lg-10  espacoTopo conteudoPrincipal">
-	<h3> Usuário </h3>
+	<h3> Ingressos </h3>
 	<hr />
 	<a id="modal-170030" href="#addUsuario" role="button" class="btn btn-success" data-toggle="modal">Adicionar Usuário</a>
 	<br />
@@ -50,15 +50,13 @@
 			</div>
 		</div>
 	</div>
-	<table id="tblUsuarios" class="display" width="100%" cellspacing="0">
+	<table id="tblClientes" class="display" width="100%" cellspacing="0">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
-                <th>Status</th>
-                <th>Login</th>
-                <th>Perfil</th>
-                <th>Ação</th>
+                <th>CPF</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -130,10 +128,54 @@
 				</div>
 			</form>
 			
+			<div class="modal fade" id="efetuarCompra" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<form method="post" action="<?php echo base_url('') ?>">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title" id="myModalLabel">
+								Efetuar Compra
+							</h4>
+						</div>
+						<div class="modal-body">
+							<input type="hidden" id="iptIdCliente" name="idusuario" />
+							<label for="Evento">
+								Evento
+							</label>
+							<select class="form-control" id="nmevento" name="nmevento">
+								<?php
+								foreach ($eventos as $row) {
+									echo 	'
+												<option value="'.$row->preco.'">'.$row->nomeEvento.'</option>
+											';
+								}
+								?>
+							</select>
+							<br />
+							<label for="Evento">
+								Valor
+							</label>
+							<input type="text" id="valor" name="valor" disabled="" />
+							<br />
+							<label for="Evento">
+								Quantidade
+							</label>
+							<input type="number" id="quantidade" name="quantidade" />
+							
+						</div>
+						<div class="modal-footer">
+							 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button> 
+							 <button type="submit" class="btn btn-primary">Excluir</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
 		</div>
 		
     
-	<script type="text/javascript" src="<?php echo base_url("utils/js/usuario.js") ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url("utils/js/ingressos.js") ?>"></script>
 </div>
 </div>
 </body>
