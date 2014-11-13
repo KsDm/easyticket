@@ -12,14 +12,13 @@ body{
 	width: 15%;
 	position: fixed;
 	padding-left: 10px;
-	margin-left: -12px;
 }
 .link-telas{
 	margin-top: 10px;
 	text-align: center;
 	margin-left: -17%;
 	border: 1px solid;
-	width: 137%;
+	width: 130%;
 	color: #FFF;
 	font-family: 'SegoeUIBold';
 	background: #5BC0DE;

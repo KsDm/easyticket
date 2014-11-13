@@ -90,7 +90,7 @@
 					</a>
 					<a href="ingressos">
 						<div class="link-telas">
-							Ingressos
+							Vendas
 						</div>
 					</a>
 				</div>

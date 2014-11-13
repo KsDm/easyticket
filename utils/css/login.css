@@ -6,11 +6,11 @@ body {
 }
 .login-container{
 	margin-top: 10%;
-	border: 1px solid #FFF;
+	background: #57AAD4;
 	border-radius: 10px;
 }
 .bg-login{
-	background: #57AAD4;
+	background: #3276B1;
 }
 .head-login{
 	color: #FFF;
