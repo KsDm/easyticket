@@ -40,7 +40,7 @@ template {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'SegoeUILight';
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -95,7 +95,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
+  font-family:'SegoeUILight';
   font-size: 1em;
 }
 
@@ -155,7 +155,7 @@ input,
 select,
 textarea {
   margin: 0;
-  font-family: inherit;
+  font-family: 'SegoeUILight';
   font-size: 100%;
 }
 
@@ -305,7 +305,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'SegoeUILight';
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -316,7 +316,7 @@ input,
 button,
 select,
 textarea {
-  font-family: inherit;
+  font-family: 'SegoeUILight';
   font-size: inherit;
   line-height: inherit;
 }
@@ -481,7 +481,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'SegoeUILight';
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -740,7 +740,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family: 'SegoeUILight';
 }
 
 code {
@@ -1855,7 +1855,7 @@ select[size] {
 }
 
 select optgroup {
-  font-family: inherit;
+  font-family: 'SegoeUILight';
   font-size: inherit;
   font-style: inherit;
 }
@@ -6462,7 +6462,7 @@ button.close {
   height: 20px;
   margin-top: -10px;
   margin-left: -10px;
-  font-family: serif;
+  font-family: 'SegoeUILight';
 }
 
 .carousel-control .icon-prev:before {

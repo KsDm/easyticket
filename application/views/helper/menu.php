@@ -9,9 +9,10 @@
 
 		<title>Easy Ticket</title>
 
-		<link href="<?php echo base_url("utils/css/bootstrap.min.css") ?>" rel="stylesheet">
+		<link href="<?php echo base_url("utils/css/bootstrap.css") ?>" rel="stylesheet">
 		<link href="<?php echo base_url("utils/css/style.css") ?>" rel="stylesheet">
 		<link href="<?php echo base_url("utils/css/jquery.datatables.css") ?>" rel="stylesheet">
+		<link href="<?php echo base_url("utils/fonts/stylesheet.css") ?>" rel="stylesheet">
 		
 		<!-- <link href="//cdn.datatables.net/1.10.3/css/jquery.dataTables.css" rel="stylesheet"> -->
 		<!-- Custom styles for this template -->
@@ -75,8 +76,16 @@
 			</div>
 		</div>
 		<div class="col-lg-12">
-			<div class="col-lg-2  espacoTopo menuLateral">
-				<a href="painel">Relatórios</a><br />
-				<a href="eventos">Eventos</a><br />
-				<a href="ingressos">Ingressos</a>
+			<div class="col-lg-2 espacoTopo menuLateral">
+				<div class="col-lg-12">
+					<div class="link-telas">
+						<a href="painel">Relatórios</a>
+					</div>
+					<div class="link-telas">
+						<a href="eventos">Eventos</a>
+					</div>
+					<div class="link-telas">
+						<a href="ingressos">Ingressos</a>
+					</div>
+				</div>
 			</div>

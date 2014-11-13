@@ -2,7 +2,6 @@ body{
 	padding: 0px;
 	margin: 0px;
 }
-
 .espacoTopo{
 	padding-top: 3%;
 }
@@ -14,7 +13,26 @@ body{
 	position: fixed;
 	padding-left: 10px;
 }
-
+.link-telas{
+	margin-top: 10px;
+	text-align: center;
+	margin-left: -17%;
+	border: 1px solid;
+	width: 137%;
+	color: #FFF;
+	font-family: 'SegoeUIBold';
+	background: #5BC0DE;
+	padding: 3%;
+	cursor: pointer;
+	z-index: 5;
+}
+.link-telas:hover{
+	color: #5BC0DE;
+	background: #FFF;
+}
+.link-telas a{
+	text-decoration: none;
+}
 .conteudoPrincipal{
 	width: 85%;
 	margin-left: 15%;

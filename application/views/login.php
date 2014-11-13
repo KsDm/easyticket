@@ -14,6 +14,7 @@
 		
 		<!-- Custom styles for this template -->
 		<link href="<?php echo base_url("utils/css/login.css") ?>" rel="stylesheet">
+		<link href="<?php echo base_url("utils/fonts/stylesheet.css") ?>" rel="stylesheet">
 
 
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
@@ -25,21 +26,24 @@
 		<script type="text/javascript" src="<?php echo base_url("utils/js/bootstrap.min.js") ?>"></script>
 		<script type="text/javascript" src="<?php echo base_url("utils/js/scripts.js") ?>"></script>
 		
+		
 	</head>
 
-	<body>
+	<body class="bg-login">
 
 		<div class="container">
-			
-			<form action="login/verificaLogin" method="post"class="form-signin" role="form">
-				<h2 class="form-signin-heading">Acesso Restrito</h2>
-				<input type="text" id="login" name="login" class="form-control" placeholder="Login" required autofocus>
-				<input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">
-					Entrar
-				</button>
-			</form>
-
+			<div class="col-lg-4"></div>
+			<div class="col-lg-4 login-container">
+				<form action="login/verificaLogin" method="post"class="form-signin" role="form">
+					<h2 class="form-signin-heading head-login">Acesso Restrito</h2>
+					<input type="text" id="login" name="login" class="form-control" placeholder="Login" required autofocus>
+					<input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">
+						Entrar
+					</button>
+				</form>
+			</div>
+			<div class="col-lg-4"></div>
 		</div>
 	</body>
 </html>
