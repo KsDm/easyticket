@@ -45,7 +45,7 @@
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
 								<li class="marginLabel">
-									<div class=" label label-info">Seja Bem-vindo <?php echo $nmusuario ?></div>
+									<div class="label label-info">Seja Bem-vindo <?php echo $nmusuario ?></div>
 								</li>
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Opções<strong class="caret"></strong></a>
@@ -78,14 +78,20 @@
 		<div class="col-lg-12">
 			<div class="col-lg-2 espacoTopo menuLateral">
 				<div class="col-lg-12">
-					<div class="link-telas">
-						<a href="painel">Relatórios</a>
-					</div>
-					<div class="link-telas">
-						<a href="eventos">Eventos</a>
-					</div>
-					<div class="link-telas">
-						<a href="ingressos">Ingressos</a>
-					</div>
+					<a href="painel">
+						<div class="link-telas">
+							Relatórios
+						</div>
+					</a>
+					<a href="eventos">
+						<div class="link-telas">
+							Eventos
+						</div>
+					</a>
+					<a href="ingressos">
+						<div class="link-telas">
+							Ingressos
+						</div>
+					</a>
 				</div>
 			</div>

@@ -12,6 +12,7 @@ body{
 	width: 15%;
 	position: fixed;
 	padding-left: 10px;
+	margin-left: -12px;
 }
 .link-telas{
 	margin-top: 10px;
@@ -30,7 +31,7 @@ body{
 	color: #5BC0DE;
 	background: #FFF;
 }
-.link-telas a{
+.menuLateral a{
 	text-decoration: none;
 }
 .conteudoPrincipal{
@@ -79,6 +80,9 @@ body{
 	padding: 5%;
 	border-radius: 1px solid #ccc;
 	
+}
+.navbar-brand{
+	color: #5BC0DE;
 }
 
 
