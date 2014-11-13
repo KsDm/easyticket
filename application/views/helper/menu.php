@@ -77,5 +77,6 @@
 		<div class="col-lg-12">
 			<div class="col-lg-2  espacoTopo menuLateral">
 				<a href="painel">Relatórios</a><br />
-				<a href="eventos">Eventos</a>
+				<a href="eventos">Eventos</a><br />
+				<a href="ingressos">Ingressos</a>
 			</div>

@@ -6,9 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<link rel="icon" href="../../favicon.ico">
 
-		<title>Signin Template for Bootstrap</title>
+		<title>Easy Ticket</title>
 
 		<link href="<?php echo base_url("utils/css/bootstrap.min.css") ?>" rel="stylesheet">
 		<link href="<?php echo base_url("utils/css/style.css") ?>" rel="stylesheet">
@@ -21,7 +20,6 @@
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
-		<link rel="shortcut icon" href="img/favicon.png">
 
 		<script type="text/javascript" src="<?php echo base_url("utils/js/jquery.min.js") ?>"></script>
 		<script type="text/javascript" src="<?php echo base_url("utils/js/bootstrap.min.js") ?>"></script>
