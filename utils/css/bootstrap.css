@@ -5701,7 +5701,7 @@ a.list-group-item.active:focus .list-group-item-text {
 }
 
 .panel-heading > .dropdown .dropdown-toggle {
-  color: #5BC0DE;
+  color: inherit;
 }
 
 .panel-title {
