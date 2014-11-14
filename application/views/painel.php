@@ -1,6 +1,6 @@
 </div>
 <div class="col-lg-10  espacoTopo conteudoPrincipal">
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="<?php echo base_url("utils/js/chart.js");?>"></script>
 	<script type="text/javascript">
 		google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);

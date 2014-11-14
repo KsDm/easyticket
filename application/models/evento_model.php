@@ -111,7 +111,7 @@ class Evento_model extends CI_Model {
 		$ano = date('Y');
 		$arrayRelatorio = array();
 		for ($i=1; $i <= 12; $i++) { 
-			$query = $this->db->query("SELECT COUNT(*) FROM ingressos.evento wHERE year(data) = ".$ano." and month(data) = ".$i.";");
+			$query = $this->db->query("SELECT COUNT(*) FROM ticket.evento wHERE year(data) = ".$ano." and month(data) = ".$i.";");
 			foreach ($query->result_array() as $row){
 			   $arrayRelatorio[$i] = array($row);
 			}
