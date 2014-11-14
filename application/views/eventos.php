@@ -161,6 +161,10 @@
 								<input class="form-control" id="iptData" name="data" type="text" />
 							</div>
 							<div class="form-group">
+								<label for="preco">Preço</label>
+								<input class="form-control" id="iptPrecoAlterar" name="preco" type="text" />
+							</div>
+							<div class="form-group">
 								<label for="horario">Horario</label>
 								<input class="form-control" id="iptHorario" name="horario" type="text"  />
 							</div>

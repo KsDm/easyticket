@@ -81,6 +81,7 @@ function modalAlterarEvento(){
 		$(".iptIdCategoria").val(data["idcategoria"]);
 		$("#iptNomeEvento").val(data["nomeEvento"]);
 		$("#iptData").val(data["data"]);
+		$("#iptPrecoAlterar").val(data["preco"]);
 		$("#iptHorario").val(data["horario"]);
 	 });
 }

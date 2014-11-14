@@ -10,7 +10,7 @@ class Evento_model extends CI_Model {
 	var $preco;
 	var $fkCategoria;
 	
-	function __construct($idevento = "", $nomeEvento = "", $data = "", $horarios = "",$preco = "" , $fkCategoria = ""){
+	function __construct($idevento = "", $nomeEvento = "", $data = "", $horarios = "", $preco = "" , $fkCategoria = ""){
 		$this->idevento = $idevento;
 		$this->nomeEvento = $nomeEvento;
 		$this->data = $data;
@@ -123,6 +123,7 @@ class Evento_model extends CI_Model {
 		$query = $this->db->get_where(self::TABELA , array('idevento' => $id));
 		return $query->result();
 	}
+	
 	
 }
 ?>

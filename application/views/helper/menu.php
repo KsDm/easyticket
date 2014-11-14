@@ -48,7 +48,7 @@
 									<div class="label label-info">Seja Bem-vindo <?php echo $nmusuario ?></div>
 								</li>
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Opções<strong class="caret"></strong></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Opções <strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
 										<?php 
 										if($perfil == "admin"){

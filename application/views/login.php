@@ -36,10 +36,13 @@
 			<div class="col-lg-4 login-container">
 				<form action="login/verificaLogin" method="post"class="form-signin" role="form">
 					<h2 class="form-signin-heading head-login">Easy Ticket - Login</h2>
+					<hr />
 					<input type="text" id="login" name="login" class="form-control" placeholder="Login" required autofocus>
 					<input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required>
 					<button class="btn btn-lg btn-info btn-block" type="submit">
-						Entrar
+						<b>
+								Entrar
+						</b>
 					</button>
 				</form>
 			</div>

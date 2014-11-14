@@ -6,6 +6,8 @@ $(document).ready(function() {
 	modalAlterarCliente();
 	modalEfetuarCompra();
 	
+	$(".respostaAjax").hide();
+	
     table = $('#tblClientes').DataTable({
     	"oLanguage": {
 	        "sEmptyTable": "Nenhum registro encontrado.",
@@ -43,9 +45,64 @@ $(document).ready(function() {
     });
     
     
+    table = $('#tblIngressosComprados').DataTable({
+    	"oLanguage": {
+	        "sEmptyTable": "Nenhum registro encontrado.",
+	        "sInfo": "_TOTAL_ registros",
+	        "sInfoEmpty": "0 Registros",
+	        "sInfoFiltered": "(De _MAX_ registros)",
+	        "sInfoPostFix":    "",
+	        "sInfoThousands":  ".",
+	        "sLengthMenu": "Mostrar _MENU_ registros por pagina",
+	        "sLoadingRecords": "Carregando...",
+	        "sProcessing":     "Processando...",
+	        "sZeroRecords": "Nenhum registro encontrado.",
+	        "sSearch": "Pesquisar",
+	        "oPaginate": {
+	            "sNext": "Proximo",
+	            "sPrevious": "Anterior",
+	            "sFirst": "Primeiro",
+	            "sLast":"Ultimo"
+	           }
+	        },
+    	"ajax" : "ingressos/listar_ingressos_comprados",
+    	 "columnDefs": [
+    	 {
+            "targets": 3,
+            "data": null,
+        }
+        ],
+    	"columns" : [{"data" : "nome"}, {"data" : "valor_total"}, {"data" : "quantidade"}, {"data" : "nomeEvento"}]
+    });
+    
+    
     $("#nmevento option").click(function(){
     	var nomeEvento = $("#nmevento option:selected").val();
-    	$("#valor").val(nomeEvento);	
+    	$(".precos").val(nomeEvento);
+    });
+    
+    $("#nmevento option").click(function(){
+    	var idevento = $("#nmevento option:selected").val();
+    	
+    	$.ajax({
+			url : "ingressos/listarPrecoPorId/" + idevento,
+			type : "POST",
+			data: {
+				idevento : idevento
+			},
+			success : function(data) {
+				var json = $.parseJSON(data);
+				
+				if(json.tipo == "success"){
+					$(".respostaAjax").show();
+					$(".evento_idevento").val(idevento);
+					$(".precos").val(json.preco);
+				}else{
+					
+				}
+			}
+		});
+    	
     });
     
 });
@@ -54,27 +111,24 @@ $(document).ready(function() {
 function modalExcluirCliente(){
 	$("#tblClientes tbody").on("click", ".btn-excluir", function () {
 		var data = table.row( $(this).parents('tr') ).data();
-		$(".spanNmUsuario").append(data["nmusuario"]);
-		$("#spanIdUsuario").val(data["idusuario"]);
+		$(".spanNomeCliente").append(data["nome"]);
+		$("#spanIdCliente").val(data["idcliente"]);
 	 });
 }
 
 function modalAlterarCliente(){
 	$("#tblClientes tbody").on("click", ".btn-alterar", function () {
 		var data = table.row( $(this).parents('tr') ).data();
-		$("#iptIdUsuario").val(data["idusuario"]);
-		$("#itpNmUsuario").val(data["nmusuario"]);
-		var status = data["fgstatus"];
-		$("#iptFgStatus option[title='"+status+"']").attr("selected","selected");
-		$("#iptLogin").val(data["login"]);
-		$("#iptPerfil").val(data["perfil"]);
+		$("#iptNomeCliente").val(data["nome"]);
+		$("#iptCpf").val(data["cpf"]);
+		$("#iptIdCliente").val(data["idcliente"]);
 	 });
 }
 
 function modalEfetuarCompra(){
 	$("#tblClientes tbody").on("click", ".btn-comprar", function () {
 		var data = table.row( $(this).parents('tr') ).data();
-		$("#iptIdCliente").val(data["idcliente"]);
+		$(".idClienteFk").val(data["idcliente"]);
 	 });
 }
 

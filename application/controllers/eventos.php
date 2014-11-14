@@ -95,12 +95,13 @@ class Eventos extends CI_Controller {
 		$idevento = mysql_real_escape_string($_POST ["idevento"]);
 		$nomeEvento = mysql_real_escape_string($_POST ["nomeEvento"]);
 		$data = mysql_real_escape_string($_POST ["data"]);
+		$preco = mysql_real_escape_string($_POST ["preco"]);
 		$horario = mysql_real_escape_string($_POST ["horario"]);
 		$fkCategoria = mysql_real_escape_string($_POST ["fk_categoria"]);
 		
 		$data = date("Y-m-d", strtotime($data));
 		
-		$evento_model = new Evento_model($idevento, $nomeEvento, $data, $horario, $fkCategoria);
+		$evento_model = new Evento_model($idevento, $nomeEvento, $data, $horario,$preco , $fkCategoria);
 		
 		$alterar = $this->evento_model->alterarEvento($evento_model);
 		

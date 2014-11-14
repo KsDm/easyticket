@@ -11,8 +11,18 @@ body{
 	height: 100%;
 	width: 15%;
 	position: fixed;
-	padding-left: 10px;
+	margin-left: -13px;
 }
+
+.menuDrop{
+	background: #FFFFFF;
+}
+
+.link-drop{
+	color: #333333;
+}
+
+
 .link-telas{
 	margin-top: 10px;
 	text-align: center;
