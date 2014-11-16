@@ -59,9 +59,6 @@
 													';
 										}
 										?>
-										<li>
-											<a href="#">Alterar Senha</a>
-										</li>
 										<li class="divider"></li>
 										<li>
 											<a href="login/sair">Sair</a>

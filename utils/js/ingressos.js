@@ -1,6 +1,9 @@
 var table = "";
+var tableIngressos = "";
 
 $(document).ready(function() {
+	
+	$("#cpf").mask("999.999.999-99");
 	
 	modalExcluirCliente();
 	modalAlterarCliente();
@@ -45,7 +48,7 @@ $(document).ready(function() {
     });
     
     
-    table = $('#tblIngressosComprados').DataTable({
+    tableIngressos = $('#tblIngressosComprados').DataTable({
     	"oLanguage": {
 	        "sEmptyTable": "Nenhum registro encontrado.",
 	        "sInfo": "_TOTAL_ registros",

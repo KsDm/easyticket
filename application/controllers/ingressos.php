@@ -56,8 +56,8 @@ class Ingressos extends CI_Controller {
 		$protocolo = time();
 		$quantidade = mysql_real_escape_string($_POST ["quantidade"]);
 		$precos = mysql_real_escape_string($_POST ["valor"]);
-		$cliente_idcliente = mysql_real_escape_string($_POST ["idcliente"]);
-		$evento_idevento = mysql_real_escape_string($_POST ["evento_idevento"]);
+		$cliente_idcliente = mysql_real_escape_string($_POST ["cliente_idcliente"]);
+		$evento_idevento = mysql_real_escape_string($_POST ["idevento"]);
 		
 		$valor_total = $quantidade * $precos;
 		

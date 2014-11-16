@@ -41,7 +41,9 @@ class Login extends CI_Controller {
 			redirect ('painel');
 		}else{
 			$this->session->sess_destroy();
-			echo "<script> alert('NÃO ENTROU')</script>";
+			echo "<script> alert('Login invalido')</script>";
+			echo "<script> location.href='".base_url('login')."';</script>";
+			
 		}
 	}
 	

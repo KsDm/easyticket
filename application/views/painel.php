@@ -32,82 +32,109 @@ var data = google.visualization.arrayToDataTable([
 	chart.draw(data, options);
 	}
 	</script>
-
-	<div class="col-lg-6" >
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4> Relatório Anual </h4>
-			</div>
-
-			<div id="piechart" style=" height: 500px;"></div>
+	
+	<div class="col-lg-12">
+		<div class="col-lg-12 painelAnual">
+			<h3>
+				Quantidade todal de eventos durante o ano de 2014 | <?php echo ( $relatorio[1][0]['COUNT(*)'] 
+																			+  $relatorio[2][0]['COUNT(*)']
+																			+  $relatorio[3][0]['COUNT(*)']
+																			+  $relatorio[4][0]['COUNT(*)']
+																			+  $relatorio[5][0]['COUNT(*)']
+																			+  $relatorio[6][0]['COUNT(*)']
+																			+  $relatorio[7][0]['COUNT(*)']
+																			+  $relatorio[8][0]['COUNT(*)']
+																			+  $relatorio[9][0]['COUNT(*)']
+																			+  $relatorio[10][0]['COUNT(*)']
+																			+  $relatorio[11][0]['COUNT(*)']
+																			+  $relatorio[12][0]['COUNT(*)']
+																				);?> Eventos
+			</h3>
+			<br />
 		</div>
-	</div>
-	<div class="col-lg-6 painelRelatorio">
-		<div class="panel panel-default">
-			<div class="panel-heading tblRelatorios painelRelatorio">
-				<h4>Quantidade de Eventos Por Mês</h4>
+		<br />
+		<div class="col-lg-6" >
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4> Relatório Anual </h4>
+				</div>
+	
+				<div id="piechart" style=" height: 500px;"></div>
 			</div>
-			<table class="table">
-				<thead>
-					<tr class="tblRelatorios">
-						<th class="tblRelatorios"> Mês </th>
-						<th class="tblRelatorios"> Quantidade </th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th class="tblRelatorios"> Janeiro </th>
-						<th class="tblRelatorios"> <?php echo $relatorio[1][0]['COUNT(*)'] ?> </th>
-					</tr>
-					<tr>
-						<th class="tblRelatorios"> Fevereiro </th>
-						<th class="tblRelatorios"> <?php echo $relatorio[2][0]['COUNT(*)'] ?> </th>
-					</tr>
-					<tr>
-						<th class="tblRelatorios"> Março </th>
-						<th class="tblRelatorios"> <?php echo $relatorio[3][0]['COUNT(*)'] ?> </th>
-					</tr>
-					<tr>
-						<th class="tblRelatorios"> Abril </th>
-						<th class="tblRelatorios"> <?php echo $relatorio[4][0]['COUNT(*)'] ?> </th>
-					</tr>
-					<tr>
-						<th class="tblRelatorios"> Maio </th>
-						<th class="tblRelatorios"> <?php echo $relatorio[5][0]['COUNT(*)'] ?> </th>
-					</tr>
-					<tr>
-						<th class="tblRelatorios"> Junho </th>
-						<th class="tblRelatorios"> <?php echo $relatorio[6][0]['COUNT(*)'] ?> </th>
-					</tr>
-					<tr>
-						<th class="tblRelatorios"> julho </th>
-						<th class="tblRelatorios"> <?php echo $relatorio[7][0]['COUNT(*)'] ?> </th>
-					</tr>
-					<tr>
-						<th class="tblRelatorios"> Agosto </th>
-						<th class="tblRelatorios"> <?php echo $relatorio[8][0]['COUNT(*)'] ?> </th>
-					</tr>
-					<tr>
-						<th class="tblRelatorios"> Setembro </th>
-						<th class="tblRelatorios"> <?php echo $relatorio[9][0]['COUNT(*)'] ?> </th>
-					</tr>
-					<tr>
-						<th class="tblRelatorios"> Outubro </th>
-						<th class="tblRelatorios"> <?php echo $relatorio[10][0]['COUNT(*)'] ?> </th>
-					</tr>
-					<tr>
-						<th class="tblRelatorios"> Novembro </th>
-						<th class="tblRelatorios"> <?php echo $relatorio[11][0]['COUNT(*)'] ?> </th>
-					</tr>
-					<tr>
-						<th class="tblRelatorios"> Dezembro </th>
-						<th class="tblRelatorios"> <?php echo $relatorio[12][0]['COUNT(*)'] ?> </th>
-					</tr>
-				</tbody>
-			</table>
 		</div>
+		
+		<div class="col-lg-6 painelRelatorio">
+				<div class="panel panel-default">
+					<div class="panel-heading tblRelatorios painelRelatorio">
+						<h4>Quantidade de Eventos Por Mês</h4>
+					</div>
+					<table class="table">
+						<thead>
+							<tr class="tblRelatorios">
+								<th class="tblRelatorios"> Mês </th>
+								<th class="tblRelatorios"> Quantidade </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="tblRelatorios"> Janeiro </th>
+								<th class="tblRelatorios"> <?php echo $relatorio[1][0]['COUNT(*)'] ?> </th>
+							</tr>
+							<tr>
+								<th class="tblRelatorios"> Fevereiro </th>
+								<th class="tblRelatorios"> <?php echo $relatorio[2][0]['COUNT(*)'] ?> </th>
+							</tr>
+							<tr>
+								<th class="tblRelatorios"> Março </th>
+								<th class="tblRelatorios"> <?php echo $relatorio[3][0]['COUNT(*)'] ?> </th>
+							</tr>
+							<tr>
+								<th class="tblRelatorios"> Abril </th>
+								<th class="tblRelatorios"> <?php echo $relatorio[4][0]['COUNT(*)'] ?> </th>
+							</tr>
+							<tr>
+								<th class="tblRelatorios"> Maio </th>
+								<th class="tblRelatorios"> <?php echo $relatorio[5][0]['COUNT(*)'] ?> </th>
+							</tr>
+							<tr>
+								<th class="tblRelatorios"> Junho </th>
+								<th class="tblRelatorios"> <?php echo $relatorio[6][0]['COUNT(*)'] ?> </th>
+							</tr>
+							<tr>
+								<th class="tblRelatorios"> julho </th>
+								<th class="tblRelatorios"> <?php echo $relatorio[7][0]['COUNT(*)'] ?> </th>
+							</tr>
+							<tr>
+								<th class="tblRelatorios"> Agosto </th>
+								<th class="tblRelatorios"> <?php echo $relatorio[8][0]['COUNT(*)'] ?> </th>
+							</tr>
+							<tr>
+								<th class="tblRelatorios"> Setembro </th>
+								<th class="tblRelatorios"> <?php echo $relatorio[9][0]['COUNT(*)'] ?> </th>
+							</tr>
+							<tr>
+								<th class="tblRelatorios"> Outubro </th>
+								<th class="tblRelatorios"> <?php echo $relatorio[10][0]['COUNT(*)'] ?> </th>
+							</tr>
+							<tr>
+								<th class="tblRelatorios"> Novembro </th>
+								<th class="tblRelatorios"> <?php echo $relatorio[11][0]['COUNT(*)'] ?> </th>
+							</tr>
+							<tr>
+								<th class="tblRelatorios"> Dezembro </th>
+								<th class="tblRelatorios"> <?php echo $relatorio[12][0]['COUNT(*)'] ?> </th>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<br />
+				<br />
+				<br />
+				
+			</div>
 	</div>
-
+	
+	
 </div>
 </div>
 </body>

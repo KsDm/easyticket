@@ -64,6 +64,9 @@ class Eventos extends CI_Controller {
 		$data = mysql_real_escape_string($_POST ["data"]);
 		$horario = mysql_real_escape_string($_POST ["horario"]);
 		$preco = mysql_real_escape_string($_POST ["preco"]);
+		
+		$preco = str_replace("," , "." , $preco);
+		
 		$fkCategoria = mysql_real_escape_string($_POST ["fk_categoria"]);
 		
 		$data = date("Y-m-d", strtotime($data));
@@ -127,7 +130,7 @@ class Eventos extends CI_Controller {
 		
 		$idevento = mysql_real_escape_string($_POST ["idevento"]);
 		
-		$evento_model = new Evento_model($idevento, null, null, null, null);
+		$evento_model = new Evento_model($idevento, null, null, null,null , null);
 		
 		$excluir = $this->evento_model->excluirEvento($evento_model);
 		

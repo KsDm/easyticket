@@ -94,7 +94,16 @@ body{
 	color: #5BC0DE;
 }
 
+.dataEvento{
+	width: 150px;
+}
 
+.painelAnual{
+	padding: 10px;
+	border-left: 2px solid #FF9900;
+	background: #FFFFFF;
+	width: 100%;
+}
 
 
 

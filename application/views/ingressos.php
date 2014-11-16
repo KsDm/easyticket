@@ -131,7 +131,7 @@
 							<h4 class="modal-title" id="myModalLabel"> Efetuar Compra </h4>
 						</div>
 						<div class="modal-body">
-							<input class="idClienteFk" name="idcliente" type="hidden" />
+							<input class="idClienteFk" name="cliente_idcliente" type="hidden" />
 							<label for="Evento"> Evento </label>
 							<select class="form-control" id="nmevento" name="nmevento">
 								<?php
@@ -146,7 +146,7 @@
 							<div class="respostaAjax">
 								<label for="Evento"> Valor </label>
 								<input type="hidden" class="precos" name="valor" />
-								<input type="hidden" class="evento_idevento" name="evento_idevento" />
+								<input type="hidden" class="evento_idevento" name="idevento" />
 								<input type="text" disabled="" class="precos" name="precos" disabled="" />
 								<br />
 								<label for="Evento"> Quantidade </label>
@@ -159,7 +159,7 @@
 								Cancelar
 							</button>
 							<button type="submit" class="btn btn-primary">
-								Cadastrar
+								Comprar
 							</button>
 						</div>
 					</div>
@@ -185,9 +185,11 @@
 				</div>
 			</div>
 		</div>
-		
+		<br />
+		<br />
+		<br />
 	</div>
-
+<script type="text/javascript" src="<?php echo base_url("utils/js/jquery.maskedinput.js") ?>"></script>
 <script type="text/javascript" src="<?php echo base_url("utils/js/ingressos.js") ?>"></script>
 </div>
 </div>

@@ -64,8 +64,8 @@
 										<input class="form-control" id="nomeEvento" name="nomeEvento" type="text" />
 									</div>
 									<div class="form-group">
-										<label for="data">Data</label>
-										<input class="form-control" id="data" name="data" type="date" />
+										<label for="data">Data</label><br />
+										<input class="dataEvento" id="data" name="data" type="date" />
 									</div>
 									<div class="form-group">
 										<label for="horario">Horario</label>
@@ -73,7 +73,7 @@
 									</div>
 									<div class="form-group">
 										<label for="preco">Preço</label>
-										<input class="form-control" id="preco" name="preco" type="text" />
+										<input class="form-control" id="preco" name="preco"  onKeyPress="return(MascaraMoeda(this,'.',',',event))" type="text" />
 									</div>
 							</div>
 							<div class="modal-footer">
@@ -179,8 +179,11 @@
 			</form>
 		</div>
 		
-		
+		<br />
+		<br />
+		<br />
 		</div>
+		<script type="text/javascript" src="<?php echo base_url("utils/js/jquery.maskedinput.js") ?>"></script>
 		<script type="text/javascript" src="<?php echo base_url("utils/js/eventos.js") ?>"></script>
 	</body>
 </html>

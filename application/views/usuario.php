@@ -22,7 +22,7 @@
 						</div>
 						<div class="form-group">
 							<label for="dssenha">Senha</label>
-							<input class="form-control" id="dssenha" name="dssenha" type="text" />
+							<input class="form-control" id="dssenha" name="dssenha" type="password" />
 						</div>
 						<div class="form-group">
 							<label for="fgstatus">Status</label>
@@ -135,6 +135,9 @@
     
 	<script type="text/javascript" src="<?php echo base_url("utils/js/usuario.js") ?>"></script>
 </div>
+<br />
+		<br />
+		<br />
 </div>
 </body>
 </html>
