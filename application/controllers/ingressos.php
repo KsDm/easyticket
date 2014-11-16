@@ -60,6 +60,7 @@ class Ingressos extends CI_Controller {
 		$evento_idevento = mysql_real_escape_string($_POST ["idevento"]);
 		
 		$valor_total = $quantidade * $precos;
+		$valor_total = number_format($valor_total, 2, '.', ''); ;
 		
 		$compra_model = new Compra_model(null, $protocolo, $quantidade, $valor_total, $cliente_idcliente, $evento_idevento);
 		
@@ -89,8 +90,9 @@ class Ingressos extends CI_Controller {
 		
 		$nome = mysql_real_escape_string($_POST ["nome"]);
 		$cpf = mysql_real_escape_string($_POST ["cpf"]);
+		$email = mysql_real_escape_string($_POST ["email"]);
 
-		$cliente_model = new Cliente_model(null, $nome, $cpf);
+		$cliente_model = new Cliente_model(null, $nome, $cpf, $email);
 		
 		$cadastrar = $this->cliente_model->cadastrarCliente($cliente_model);		
 		
@@ -111,8 +113,9 @@ class Ingressos extends CI_Controller {
 		$idcliente= mysql_real_escape_string($_POST ["idcliente"]);
 		$nome = mysql_real_escape_string($_POST ["nome"]);
 		$cpf = mysql_real_escape_string($_POST ["cpf"]);
+		$email = mysql_real_escape_string($_POST ["email"]);
 
-		$cliente_model = new Cliente_model($idcliente, $nome, $cpf);
+		$cliente_model = new Cliente_model($idcliente, $nome, $cpf, $email);
 		
 		$alterar = $this->cliente_model->alterarCliente($cliente_model);		
 		

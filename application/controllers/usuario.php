@@ -107,10 +107,11 @@ class Usuario extends CI_Controller {
 		
 		$nmusuario = mysql_real_escape_string($_POST ["nmusuario"]);
 		$fgstatus = mysql_real_escape_string($_POST ["fgstatus"]);
+		$dssenha = md5(mysql_real_escape_string($_POST ["dssenha"]));
 		$login = mysql_real_escape_string($_POST ["login"]);
 		$perfil = mysql_real_escape_string($_POST ["perfil"]);
 		
-		$usuario = new Usuario_model(null, $nmusuario , null , $fgstatus, $login, $perfil);
+		$usuario = new Usuario_model(null, $nmusuario , $dssenha , $fgstatus, $login, $perfil);
 		
 		$cadastrar = $this->usuario_model->cadastrarUsuario($usuario);
 		

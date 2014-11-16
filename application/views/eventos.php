@@ -73,7 +73,7 @@
 									</div>
 									<div class="form-group">
 										<label for="preco">Preço</label>
-										<input class="form-control" id="preco" name="preco"  onKeyPress="return(MascaraMoeda(this,'.',',',event))" type="text" />
+										<input class="form-control" id="preco" name="preco" type="text" size="10" maxlength="10" onkeydown="FormataMoeda(this,10,event)" onkeypress="return maskKeyPress(event)" />
 									</div>
 							</div>
 							<div class="modal-footer">
@@ -97,8 +97,8 @@
 	                <th>Nome do Evento</th>
 	                <th>Data</th>
 	                <th>Horario</th>
-	                <th>Categoria</th>
 	                <th>Preço</th>
+	                <th>Categoria</th>
 	                <th>Ação</th>
 	            </tr>
 	        </thead>

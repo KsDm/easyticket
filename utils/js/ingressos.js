@@ -39,12 +39,12 @@ $(document).ready(function() {
                 "searchable": false
          },
     	 {
-            "targets": 3,
+            "targets": 4,
             "data": null,
             "defaultContent": "<a href='#alterarUsuario' data-toggle='modal' id='modal-30777' role='button' class='btn btn-success btn-alterar'><i class='glyphicon glyphicon-refresh'></i></a> <a href='#excluirUsuario' data-toggle='modal' id='modal-30777' role='button' class='btn btn-danger btn-excluir'><i class='glyphicon glyphicon-trash'></i></a> <a href='#efetuarCompra' data-toggle='modal' id='modal-30777' role='button' class='btn btn-info btn-comprar'><i class='glyphicon glyphicon-shopping-cart'></i></a>"
         }
         ],
-    	"columns" : [{"data" : "idcliente"}, {"data" : "nome"}, {"data" : "cpf"}]
+    	"columns" : [{"data" : "idcliente"}, {"data" : "nome"}, {"data" : "cpf"}, {"data" : "email"}]
     });
     
     
@@ -124,6 +124,7 @@ function modalAlterarCliente(){
 		var data = table.row( $(this).parents('tr') ).data();
 		$("#iptNomeCliente").val(data["nome"]);
 		$("#iptCpf").val(data["cpf"]);
+		$("#iptEmail").val(data["email"]);
 		$("#iptIdCliente").val(data["idcliente"]);
 	 });
 }

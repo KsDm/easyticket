@@ -104,6 +104,8 @@ class Eventos extends CI_Controller {
 		
 		$data = date("Y-m-d", strtotime($data));
 		
+		$preco = str_replace("," , "." , $preco);
+		
 		$evento_model = new Evento_model($idevento, $nomeEvento, $data, $horario,$preco , $fkCategoria);
 		
 		$alterar = $this->evento_model->alterarEvento($evento_model);

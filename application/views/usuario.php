@@ -21,6 +21,10 @@
 							<input class="form-control" id="nmusuario" name="nmusuario" type="text" />
 						</div>
 						<div class="form-group">
+							<label for="login">Login</label>
+							<input class="form-control" id="login" name="login" type="text" />
+						</div>
+						<div class="form-group">
 							<label for="dssenha">Senha</label>
 							<input class="form-control" id="dssenha" name="dssenha" type="password" />
 						</div>
@@ -32,12 +36,11 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label for="login">Login</label>
-							<input class="form-control" id="login" name="login" type="text" />
-						</div>
-						<div class="form-group">
 							<label for="perfil">Perfil</label>
-							<input class="form-control" id="perfil" name="perfil" type="text" />
+							<select class="form-control" id="perfil" name="perfil">
+								<option value="admin">Administrador</option>
+								<option value="comum">Comum</option>
+							</select>
 						</div>
 				</div>
 				<div class="modal-footer">
@@ -117,7 +120,10 @@
 							</div>
 							<div class="form-group">
 								<label for="horario">Perfil</label>
-								<input class="form-control" id="iptPerfil" name="perfil" type="text"  />
+								<select class="form-control" id="iptPerfil" name="perfil">
+								<option value="admin">Administrador</option>
+								<option value="comum">Comum</option>
+							</select>
 							</div>
 							</div>
 							<input type="hidden" name="idusuario" id="iptIdUsuario" value="'.$row->idusuario.'" />

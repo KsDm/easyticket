@@ -36,7 +36,9 @@ var data = google.visualization.arrayToDataTable([
 	<div class="col-lg-12">
 		<div class="col-lg-12 painelAnual">
 			<h3>
-				Quantidade todal de eventos durante o ano de 2014 | <?php echo ( $relatorio[1][0]['COUNT(*)'] 
+				Quantidade todal de eventos durante o ano de 2014  <span class="label label-success">
+					
+				<?php echo ( $relatorio[1][0]['COUNT(*)'] 
 																			+  $relatorio[2][0]['COUNT(*)']
 																			+  $relatorio[3][0]['COUNT(*)']
 																			+  $relatorio[4][0]['COUNT(*)']
@@ -49,6 +51,7 @@ var data = google.visualization.arrayToDataTable([
 																			+  $relatorio[11][0]['COUNT(*)']
 																			+  $relatorio[12][0]['COUNT(*)']
 																				);?> Eventos
+				</span> 
 			</h3>
 			<br />
 		</div>

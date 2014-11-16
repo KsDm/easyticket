@@ -35,6 +35,10 @@
 							<input class="form-control" id="nome" name="nome" type="text" />
 						</div>
 						<div class="form-group">
+							<label for="email">Email</label>
+							<input class="form-control" id="email" name="email" type="text" />
+						</div>
+						<div class="form-group">
 							<label for="nmusuario">CPF</label>
 							<input class="form-control" id="cpf" name="cpf" type="text" />
 						</div>
@@ -55,6 +59,7 @@
 				<th>Id</th>
 				<th>Nome</th>
 				<th>CPF</th>
+				<th>Email</th>
 				<th>Ações</th>
 			</tr>
 		</thead>
@@ -102,6 +107,10 @@
 						<div class="form-group">
 							<label for="nomeEvento">Nome do Cliente</label>
 							<input class="form-control" id="iptNomeCliente" name="nome" type="text" />
+						</div>
+						<div class="form-group">
+							<label for="iptEmail">Email</label>
+							<input class="form-control" id="iptEmail" name="email" type="text" />
 						</div>
 						<div class="form-group">
 							<label for="nomeEvento">CPF</label>
@@ -189,9 +198,11 @@
 		<br />
 		<br />
 	</div>
+	
 <script type="text/javascript" src="<?php echo base_url("utils/js/jquery.maskedinput.js") ?>"></script>
 <script type="text/javascript" src="<?php echo base_url("utils/js/ingressos.js") ?>"></script>
 </div>
+
 </div>
 </body>
 </html>

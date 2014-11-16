@@ -56,7 +56,7 @@ class Usuario_model extends CI_Model {
 	function cadastrarUsuario(Usuario_model $usuario){
 		if(!empty($usuario->nmusuario) && !empty($usuario->fgstatus) && !empty($usuario->login) && !empty($usuario->perfil)){
 				
-			$data = array('nmusuario' => $usuario->nmusuario,'dssenha' => md5($usuario->dssenha) ,'fgstatus' => $usuario->fgstatus, 
+			$data = array('nmusuario' => $usuario->nmusuario,'dssenha' => $usuario->dssenha ,'fgstatus' => $usuario->fgstatus, 
 							'login' => $usuario->login, 'perfil' => $usuario->perfil);
 		
 			$inserir = $this -> db -> insert(self::TABELA, $data);

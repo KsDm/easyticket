@@ -6,11 +6,13 @@ class Cliente_model extends CI_Model {
 	var $idcliente;
 	var $nome;
 	var $cpf;
+	var $email;
 
-	function __construct($idcliente = "", $nome = "", $cpf = "") {
+	function __construct($idcliente = "", $nome = "", $cpf = "", $email = "") {
 		$this->idcliente = $idcliente;
 		$this->nome = $nome;
 		$this->cpf = $cpf;
+		$this->email = $email;
 	}
 
 	function listarUsuario(){
@@ -21,7 +23,7 @@ class Cliente_model extends CI_Model {
 	function cadastrarCliente(Cliente_model $cliente){
 		if(!empty($cliente->nome) && !empty($cliente->cpf)){
 				
-			$data = array('nome' => $cliente->nome, 'cpf' => $cliente->cpf );
+			$data = array('nome' => $cliente->nome, 'cpf' => $cliente->cpf, 'email' => $cliente->email );
 		
 			$inserir = $this -> db -> insert(self::TABELA, $data);
 			
@@ -37,7 +39,7 @@ class Cliente_model extends CI_Model {
 	function alterarCliente(Cliente_model $cliente){
 		if(!empty($cliente->nome) && !empty($cliente->cpf)){
 				
-			$data = array('idcliente' => $cliente->idcliente, 'nome' => $cliente->nome, 'cpf' => $cliente->cpf );
+			$data = array('idcliente' => $cliente->idcliente, 'nome' => $cliente->nome, 'cpf' => $cliente->cpf, 'email' => $cliente->email );
 			
 			$this->db->where('idcliente', $cliente->idcliente);
 				
