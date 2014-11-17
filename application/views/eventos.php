@@ -44,6 +44,9 @@
 								</div>
 								<hr />
 								<form id="formEvento" action="eventos/cadastrarEvento" method="post" role="form">
+									<div id="erroVazio" class="alert alert-warning">
+										*Todos os campos são obrigatórios
+									</div>
 									<div class="form-group">
 										<label for="categoria">Categoria</label>
 										<select id="fk_categoria" name="fk_categoria">
@@ -158,7 +161,7 @@
 							</div>
 							<div class="form-group">
 								<label for="data">Data</label>
-								<input class="form-control" id="iptData" name="data" type="text" />
+								<input class="dataEvento" id="iptData" name="data" type="date" />
 							</div>
 							<div class="form-group">
 								<label for="preco">Preço</label>
@@ -185,5 +188,6 @@
 		</div>
 		<script type="text/javascript" src="<?php echo base_url("utils/js/jquery.maskedinput.js") ?>"></script>
 		<script type="text/javascript" src="<?php echo base_url("utils/js/eventos.js") ?>"></script>
+		<script type="text/javascript" src="<?php echo base_url("utils/js/validacao.js") ?>"></script>
 	</body>
 </html>

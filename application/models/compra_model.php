@@ -41,5 +41,8 @@ class Compra_model extends CI_Model {
 		return $query->result();
 	}
 	
+	function excluirIngressoId($idcliente){
+		$excluir = $this->db->delete(self::TABELA, array('cliente_idcliente' => $idcliente));
+	}
 }
 ?>

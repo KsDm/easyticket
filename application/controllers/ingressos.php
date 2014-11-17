@@ -50,6 +50,13 @@ class Ingressos extends CI_Controller {
 		echo json_encode(array("data" => $ingressosArray));
 	}
 	
+	/* 
+	 * Comprar Ingresso
+	 * 
+	 * Orientação a objeto = Sim
+	 * 
+	 * Teste = OK
+	 */
 	function comprarIngresso(){
 		$this -> load -> model('compra_model');
 		
@@ -84,7 +91,14 @@ class Ingressos extends CI_Controller {
 		
 		return $eventos;	
 	}
-		
+	
+	/* 
+	 * Cadastrar Cliente
+	 * 
+	 * Orientação a objeto = Sim
+	 * 
+	 * Teste = OK
+	 */	
 	function cadastrarCliente(){
 		$this -> load -> model('cliente_model');
 		
@@ -107,6 +121,13 @@ class Ingressos extends CI_Controller {
 		}
 	}
 	
+	/* 
+	 * Alterar Ingresso
+	 * 
+	 * Orientação a objeto = Sim
+	 * 
+	 * Teste = OK
+	 */
 	function alterarCliente(){
 		$this -> load -> model('cliente_model');
 		
@@ -130,11 +151,20 @@ class Ingressos extends CI_Controller {
 		}
 	}
 	
+	/* 
+	 * Excluir Cliente
+	 * 
+	 * Orientação a objeto = Sim
+	 * 
+	 * Teste = OK
+	 */
 	function excluirCliente(){
 		$this->load->model('cliente_model');
+		$this->load->model('compra_model');
 		
 		$idevento = mysql_real_escape_string($_POST ["idcliente"]);
 		
+		$excluir_ingresso = $this->compra_model->excluirIngressoId($idevento);		
 		$cliente_model = new Cliente_model($idevento, null, null);
 		
 		$excluir = $this->cliente_model->excluirCliente($cliente_model);
@@ -146,6 +176,13 @@ class Ingressos extends CI_Controller {
 		}
 	}
 	
+	/* 
+	 * Listar Preço por Id
+	 * 
+	 * Orientação a objeto = Não
+	 * 
+	 * Teste = OK
+	 */
 	function listarPrecoPorId($id){
 		$this->load->model('evento_model');
 		

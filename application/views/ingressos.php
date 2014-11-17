@@ -29,7 +29,10 @@
 					<h4 class="modal-title" id="myModalLabel"> Novo Cliente </h4>
 				</div>
 				<div class="modal-body">
-					<form action="<?php echo base_url('ingressos/cadastrarCliente') ?>" method="post" role="form">
+					<form id="formCliente" action="<?php echo base_url('ingressos/cadastrarCliente') ?>" method="post" role="form">
+						<div id="erroVazio" class="alert alert-warning">
+							*Todos os campos são obrigatórios
+						</div>
 						<div class="form-group">
 							<label for="nmusuario">Nome do Cliente</label>
 							<input class="form-control" id="nome" name="nome" type="text" />
@@ -130,7 +133,7 @@
 	</div>
 
 		<div class="modal fade" id="efetuarCompra" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<form method="post" action="<?php echo base_url('ingressos/comprarIngresso') ?>">
+			<form id="formCompra" method="post" action="<?php echo base_url('ingressos/comprarIngresso') ?>">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -141,6 +144,9 @@
 						</div>
 						<div class="modal-body">
 							<input class="idClienteFk" name="cliente_idcliente" type="hidden" />
+							<div id="erroQuantidade" class="alert alert-warning">
+								* Quantidade não pode ser menor ou igual a zero.
+							</div>
 							<label for="Evento"> Evento </label>
 							<select class="form-control" id="nmevento" name="nmevento">
 								<?php
@@ -201,6 +207,7 @@
 	
 <script type="text/javascript" src="<?php echo base_url("utils/js/jquery.maskedinput.js") ?>"></script>
 <script type="text/javascript" src="<?php echo base_url("utils/js/ingressos.js") ?>"></script>
+<script type="text/javascript" src="<?php echo base_url("utils/js/validacao.js") ?>"></script>
 </div>
 
 </div>

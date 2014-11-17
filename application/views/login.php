@@ -34,13 +34,16 @@
 		<div class="container">
 			<div class="col-lg-4"></div>
 			<div class="col-lg-4 login-container">
-				<form action="login/verificaLogin" method="post"class="form-signin" role="form">
+				<form id="formLogin" action="login/verificaLogin" method="post"class="form-signin" role="form">
+					<div id="erroVazio" class="alert alert-warning">
+						*Todos os campos são obrigatórios
+					</div>
 					<br />	
 					<img src="<?php echo base_url('utils/img/logoEasy.png'); ?>" />
 					<br />	
 					<br />	
-					<input type="text" id="login" name="login" class="form-control" placeholder="Login" required autofocus>
-					<input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required>
+					<input type="text" id="login" name="login" class="form-control" placeholder="Login"  >
+					<input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" >
 					<button class="btn btn-lg btn-info btn-block" type="submit">
 						<b>
 								Entrar
@@ -50,5 +53,6 @@
 			</div>
 			<div class="col-lg-4"></div>
 		</div>
+		<script type="text/javascript" src="<?php echo base_url("utils/js/validacao.js") ?>"></script>
 	</body>
 </html>

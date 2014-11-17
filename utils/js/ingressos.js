@@ -114,7 +114,7 @@ $(document).ready(function() {
 function modalExcluirCliente(){
 	$("#tblClientes tbody").on("click", ".btn-excluir", function () {
 		var data = table.row( $(this).parents('tr') ).data();
-		$(".spanNomeCliente").append(data["nome"]);
+		$(".spanNomeCliente").html(data["nome"]);
 		$("#spanIdCliente").val(data["idcliente"]);
 	 });
 }

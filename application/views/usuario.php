@@ -15,7 +15,10 @@
 					<h4 class="modal-title" id="myModalLabel"> Novo Usuário </h4>
 				</div>
 				<div class="modal-body">
-					<form action="<?php echo base_url('usuario/cadastrarUsuario') ?>" method="post" role="form">
+					<form id="formUsuario" action="<?php echo base_url('usuario/cadastrarUsuario') ?>" method="post" role="form">
+						<div id="erroVazio" class="alert alert-warning">
+							*Todos os campos são obrigatórios
+						</div>
 						<div class="form-group">
 							<label for="nmusuario">Nome do Usuário</label>
 							<input class="form-control" id="nmusuario" name="nmusuario" type="text" />
@@ -93,7 +96,7 @@
 		</div>
 		
 		<div class="modal fade" id="alterarUsuario" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<form method="post" action="<?php echo base_url('usuario/alterarUsuario') ?>">
+			<form id="" method="post" action="<?php echo base_url('usuario/alterarUsuario') ?>">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -140,6 +143,7 @@
 		
     
 	<script type="text/javascript" src="<?php echo base_url("utils/js/usuario.js") ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url("utils/js/validacao.js") ?>"></script>
 </div>
 <br />
 		<br />

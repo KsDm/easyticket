@@ -4,8 +4,6 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="">
-		<meta name="author" content="">
 
 		<title>Easy Ticket</title>
 
@@ -14,8 +12,6 @@
 		<link href="<?php echo base_url("utils/css/jquery.datatables.css") ?>" rel="stylesheet">
 		<link href="<?php echo base_url("utils/fonts/stylesheet.css") ?>" rel="stylesheet">
 		
-		<!-- <link href="//cdn.datatables.net/1.10.3/css/jquery.dataTables.css" rel="stylesheet"> -->
-		<!-- Custom styles for this template -->
 		
 		<link href="<?php echo base_url("utils/css/login.css") ?>" rel="stylesheet">
 

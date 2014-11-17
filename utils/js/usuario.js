@@ -46,7 +46,7 @@ $(document).ready(function() {
 function modalExcluirUsuario(){
 	$("#tblUsuarios tbody").on("click", ".btn-excluir", function () {
 		var data = table.row( $(this).parents('tr') ).data();
-		$(".spanNmUsuario").append(data["nmusuario"]);
+		$(".spanNmUsuario").html(data["nmusuario"]);
 		$("#spanIdUsuario").val(data["idusuario"]);
 	 });
 }
